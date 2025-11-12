@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스폼</title>
+    <style>
+        article {
+            border: 1px solid #000;
+            margin: 50px;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .translate > div {
+            background: yellowgreen;
+        }
+
+        .translateX {
+            transform: translateX(100%);
+        }
+
+        .translateY {
+            transform: translateY(-100px);
+            /* -값을 주면 위로이동한다. */
+        }
+
+        .translateA {
+            transform: translate(50px,-100%);
+        }
+
+        .scale > div {
+            background: skyblue;
+        }
+        
+        .scaleX {
+            transform: scaleX(1.5);
+            /* 본인 크기의 반절 되는부분을 가로로 1.5 커지게 만듦. */
+        }
+
+        .scaleY {
+            transform: scaleY(0.7);
+        }
+
+        .scaleA {
+            /* transform: scale(0.3,1.2); */
+            transform: scale(1.2);
+        }
+
+        .skew > div {
+            background: pink;
+        }
+
+        .skewX {
+            transform: skewX(50deg);
+        }
+
+        .skewY {
+            transform: skewY(10deg);
+        }
+
+        .rotate_box > .rotate {
+            background: slateblue;
+        }
+
+        .rotate {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- translate = X,Y,Z방향으로 이동 -->
+    <article class="translate">
+        <div class="translateX"></div>
+        <div class="translateY"></div>
+        <div class="translateA"></div>
+    </article>
+
+    <!-- /* scale = 크기조절 */ -->
+    <article class="scale">
+        <div class="scaleX"></div>
+        <div class="scaleY"></div>
+        <div class="scaleA"></div>
+    </article>
+    <!-- skew = 비틀기 -->
+    <article class="skew">
+        <div class="skewX"></div>
+        <div class="skewY"></div>
+        <div class="skewA"></div>
+    </article>
+
+    <!-- rotate = 회전 -->
+    <article class="rotate_box">
+        <div class="rotate"></div>
+    </article>
+</body>
+</html>
