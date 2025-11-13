@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퍼센테이지실습</title>
+    <title>퍼센테이지실습_테스트</title>
     <script src="https://kit.fontawesome.com/ffaa8b681b.js" crossorigin="anonymous"></script>
     <style>
         * {
@@ -31,8 +31,35 @@
 
         .percent_article > i {
             color: yellowgreen;
-            margin-left: 8px;
+            margin-right: 8px;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
         }
+
+        .percent_article::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: rgba(153, 205, 50, 0.446);
+            transition: width 0.5s ease;
+            z-index: 0;
+        }
+
+        .percent_article:hover::before {
+            width: 100%;
+        }
+
+        .percent_article {
+            position: relative;
+        }
+        
+        
+
+
     </style>
 </head>
 
