@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            /* animation-name: boxAnimation;
+            animation-duration: 5s;
+            /* 지속시간 */
+            /* animation-iteration-count: 2; */
+            /* 재생반복횟수 */
+            /* animation-direction: reverse; */
+            /* 재생방향 */
+            /* animation-fill-mode: forwards; */
+            /* 애니메이션이 종료될 때 원래대로 돌아오지 않음*/
+            /* animation-delay: 5s;
+            /* 브라우저 열린 뒤 n초(설정값) 후에 시작 */
+
+            /* animation: boxAnimation 5s linear 3s 2 forwards; */
+        }
+
+        .box:nth-child(1) {
+            background: rgb(240, 146, 129);
+            animation: boxAnimation 1s linear 3s infinite forwards;
+        }
+
+        .box:nth-child(2) {
+            background: rgb(244, 204, 123);
+            animation: boxAnimation 1s ease 3s infinite forwards;
+        }
+
+        .box:nth-child(3) {
+            background: rgb(199, 240, 134);
+            animation: boxAnimation 1s ease-in 3s infinite forwards;
+        }
+
+        .box:nth-child(4) {
+            background: rgb(148, 205, 245);
+            animation: boxAnimation 1s ease-in-out 3s infinite forwards;
+        }
+
+        .box:nth-child(5) {
+            background: rgb(160, 143, 239);
+            animation: boxAnimation 1s ease-out 3s infinite forwards;
+        }
+
+        .box:nth-child(6) {
+            background: rgb(243, 205, 233);
+            animation: boxAnimation 1s cubic-bezier(0.85, -0.18, 0.15, 1.06) 3s infinite forwards;
+
+        }
+
+
+        .box {
+            background: coral;
+        }
+
+        @keyframes boxAnimation {
+            from {
+                width: 100px;
+            }
+
+            to {
+                width: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+
+</html>
