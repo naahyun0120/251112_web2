@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로딩이펙트</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            gap: 60px;
+            align-items: flex-end;
+            height: 300px;
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            background-color: #5DADE2;
+            border-radius: 50%;
+            animation: bounce 0.6s ease-in-out infinite;
+        }
+
+        .circle:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .circle:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        .circle:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+</html>
