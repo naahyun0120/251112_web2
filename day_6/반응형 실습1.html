@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 실습1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .box {
+            width: 100%;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* 첫 번째 박스: 기본적으로 보이고, 1280px 이하에서 사라짐 */
+        .box:nth-child(1) {
+            background-color: #ff6b6b;
+            color: white;
+            display: block;
+        }
+
+        @media (max-width: 1280px) {
+            .box:nth-child(1) {
+                display: none;
+            }
+        }
+
+        /* 두 번째 박스: 760px 초과 ~ 1280px 이하에서만 보임 */
+        .box:nth-child(2) {
+            background-color: #4ecdc4;
+            color: white;
+            display: none;
+        }
+
+        @media (min-width: 761px) and (max-width: 1280px) {
+            .box:nth-child(2) {
+                display: block;
+            }
+        }
+
+        /* 세 번째 박스: 760px 이하에서 보이고, 360px 이하에서 사라짐 */
+        .box:nth-child(3) {
+            background-color: #95e1d3;
+            color: #333;
+            display: none;
+        }
+
+        @media (max-width: 760px) {
+            .box:nth-child(3) {
+                display: block;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .box:nth-child(3) {
+                display: none;
+            }
+        }
+
+        /* 네 번째 박스: 360px 이하에서만 보임 */
+        .box:nth-child(4) {
+            background-color: #f38181;
+            color: white;
+            display: none;
+        }
+
+        @media (max-width: 360px) {
+            .box:nth-child(4) {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        저는 브라우저 크기의 100%를 차지하고 브라우저가 1280까지 줄어들면 사라져요
+    </div>
+    <div class="box">
+        저는 브라우저의 크기가 760보다 크고 1280보다 작을때만 나타나요
+    </div>
+    <div class="box">
+        저는 브라우저의 크기가 760이하일 때 나타나고 브라우저가 360보다 작아지면 다시 사라져요
+    </div>
+    <div class="box">
+        저는 브라우저의 크기가 360이하일 때 나타나요
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+:root {
+    --main_color: #b7ee57;
+    --sub_color: #77b9ef;
+    --button_bg: pink;
+    --lg_font: 56px;
+}
+
+.text_color {
+    color: red;
+}
+
+.main_text {
+    color: var(--main_color);
+    font-size: var(--lg_font);
+}
+
+.sub_text {
+    color: var(--sub_color);
+}
+
+.button {
+    background-color: var(--button_bg);
+}

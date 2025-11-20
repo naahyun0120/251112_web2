@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <style>
+        .pc_box {
+            display: flex;
+        }
+
+        .pc_media {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(164, 20, 217);
+            margin: 24px;
+        }
+
+        .pc_media:nth-child(2){
+            display: none;
+        }
+        .mo_media {
+            width: 100%;
+            height: 500%;
+            background-color: rgb(219, 18, 209);
+            margin: 24px;
+        }
+
+        @media (min-width:350px) {
+
+            /* min 속성: 늘어날때 */
+            .mo_media {
+                width: 50px;
+                height: 100px;
+            }
+        }
+
+        @media (min-width:760px) {
+
+            /* min 속성: 늘어날때 */
+            .mo_media {
+                width: 500px;
+                height: 300px;
+            }
+        }
+
+        @media (max-width:1024px) {
+
+            /* max 속성: 줄어들때 */
+            .pc_box {
+                flex-wrap: wrap;
+            }
+
+            .pc_media {
+                width: 100%;
+            }
+        }
+
+        .mo_pc_media {
+            width: 100%;
+            height: 500px;
+            background-color: rgb(90, 217, 183);
+        }
+
+        @media (min-width:760px) and (max-width:1024px) {
+            .mo_pc_media {
+                background-color: rgb(156, 224, 174);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pc_box">
+        <div class="pc_media"></div>
+        <div class="pc_media"></div>
+        <div class="pc_media"></div>
+    </div>
+    <div class="mo_media"></div>
+    <div class="mo_pc_media"></div>
+</body>
+
+</html>
