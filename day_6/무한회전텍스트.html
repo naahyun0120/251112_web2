@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>무한회전텍스트</title>
     <style>
+        @font-face {
+            font-family: 'HappinessGoheung';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/행복고흥B.woff') format('woff');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        /* @font-face {
+            font-family: 'IncheonEducation';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceJaram-Rg.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        } */
+
         section {
             width: 100%;
             overflow: hidden;
@@ -14,6 +29,8 @@
             width: max-content;
             font-size: 150px;
             animation: roll_text 45s linear infinite;
+            /* font-family: 'IncheonEducation'; */
+            font-family: 'HappinessGoheung';
         }
 
         @keyframes roll_text {
@@ -27,13 +44,17 @@
         }
     </style>
 </head>
+
 <body>
     <section>
         <div class="ani_text">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci deleniti doloribus sequi? Distinctio, nesciunt tenetur aut, ipsa laudantium ipsum vero officia dignissimos voluptatum reprehenderit laborum soluta, dolores sed quibusdam cumque!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci deleniti doloribus sequi? Distinctio,
+                nesciunt tenetur aut, ipsa laudantium ipsum vero officia dignissimos voluptatum reprehenderit laborum
+                soluta, dolores sed quibusdam cumque!
             </p>
         </div>
     </section>
 </body>
+
 </html>
