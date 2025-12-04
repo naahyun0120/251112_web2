@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>디데이계산기</title>
+    <title>Dday계산기</title>
 </head>
 <body>
     <script>
         let today = new Date();
         let nowYear = today.getFullYear();
-        let theDate = new Date(nowYear,11,31);
+        let lastDay = new Date(nowYear,11,31);
 
-        let result = today.getTime();
-        let result2 = lastDay.getTime();
+        // let result = today.getTime();
+        // let result2 = lastDay.getTime();
         // console.log(result); // 1764732961630
-        console.log(result2);
+        // console.log(result2); // 1767106800000
+        // //2373838370
+        
 
         let dDay = lastDay.getTime() - today.getTime();
 
-        let result = Nath.ceil(dDay / (1000 * 60 * 60 * 24));
+        let result = Math.ceil(dDay / (1000 * 60 * 60 * 24));
         console.log(result);
     </script>
 </body>
