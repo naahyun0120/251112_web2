@@ -3,10 +3,12 @@
     --main_red_bg: #be201f;
 }
 
+/* 메인섹션 시작 */
 .main_section {
     position: relative;
 }
 
+/* 헤더시작 */
 header {
     position: fixed;
     width: 100%;
@@ -32,7 +34,7 @@ header > p {
     align-items: center;
 }
 
-/* .header_menu,
+.header_menu,
 .logo,
 .header_icon {
     width: 500px;
@@ -44,7 +46,7 @@ header > p {
 
 .header_icon {
     justify-content: flex-end;
-} */
+}
 
 .header_menu,
 .header_icon {
@@ -52,13 +54,14 @@ header > p {
 }
 
 .header_menu > li {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--main_red_color);
     font-weight: 600;
 }
+/* 헤더끝 */
 
 .bg_area {
-    background: url(../image/a28fe238a9d2aef23923b6b4faa6c4f7.png);
+    background: url(../image/main_section_bg.png);
     height: 100vh;
     background-repeat: no-repeat;
     display: flex;
@@ -82,6 +85,7 @@ header > p {
 /* 메인섹션끝 */
 
 /* 쉐이크리스트 시작 */
+
 .shack_list_section {
     padding: 80px;
     width: 100%;
@@ -116,12 +120,14 @@ header > p {
 }
 
 .real_price {
-    color: #ecb9b9
+    color: #f7bfbf;
     text-decoration: line-through;
 }
 
 .shack_discount {
     border: 1px solid var(--main_red_bg);
-    border-raius: 24px;
-    margin-top: 
+    border-radius: 24px;
+    margin-top: 16px;
+    padding: 8px;
+    display: inline-block;
 }
